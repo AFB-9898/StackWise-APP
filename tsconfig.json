@@ -1,6 +1,30 @@
 {
-  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "target": "ES2020",
+    "lib": ["ES2020"],
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "module": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["nativewind/types", "expo-router"]
+  },
+  "include": [
+    "nativewind-env.d.ts",
+    "app",
+    "src",
+    "App.tsx",
+    "expo-env.d.ts"
+  ],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"]
 }
